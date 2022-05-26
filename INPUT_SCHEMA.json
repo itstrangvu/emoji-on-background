@@ -1,0 +1,42 @@
+{
+    "title": "Emoji on cover generator",
+    "description": "Takes a screenshot of an public Apify user's detail page, and generates a nice image for sharing.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        
+        "emojiUrl": {
+            "title": "Emoji url",
+            "type": "string",
+            "description": "A link to the emoji image",
+            "editor": "textfield",
+            "prefill": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/seedling_1f331.png"
+        },
+        "type": {
+            "title": "Image format",
+            "type": "string",
+            "description": "Choose whether you want the image to be in JPEG or PNG format",
+            "editor": "select",
+            "prefill": "jpeg",
+            "default": "jpeg",
+            "enum": [
+                "jpeg",
+                "png"
+            ],
+            "enumTitles": [
+                "JPEG",
+                "PNG"
+            ]
+        },
+        "debug": {
+            "title": "Debug",
+            "type": "boolean",
+            "description": "In case you want to store the HTML and slow it down.",
+            "editor": "checkbox"
+        }
+    },
+    "required": [
+        "username",
+        "type"
+    ]
+}
